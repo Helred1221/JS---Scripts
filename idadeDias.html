@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade em Dias</title>
+    <style>
+        .center {
+            background-color: tomato;
+            color: rgb(0, 0, 0);
+            border: 2px solid grey;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="center">
+        <script>
+            var calcularIdade = function(idade) {
+                var idadeDias = idade * 365;
+                return idadeDias;
+            };
+            var batimentosDados = function(batimentos, idadeDias) {
+                var batimentos = ((idadeDias * 24) * 60) * 80;
+                return batimentos;
+            };
+
+            var idade = prompt("Digite sua idade em anos: ");
+            var idadeDias = calcularIdade(idade, idadeDias);
+            document.write("A sua idade em dias é: " + idadeDias);
+            var batimentos = batimentosDados(batimentos, idadeDias);
+            document.write("<br> Seu coração já bateu " + batimentos + " em sua vida.");
+        </script>
+    </div>
+
+    <div class="img"><img src="../Imagens/Andromeda Galaxy.jpg" width="750px" height="500px" alt="Galaxia hehe"></div>
+</body>
+
+</html>
