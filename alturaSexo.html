@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alturas</title>
+</head>
+<body>
+    <h1>Alturas</h1>
+    <script>
+        var cont;
+        var altura = 0, maiorAltura, menorAltura;
+        var sexo;
+        var contM = 0, contF = 0;
+
+
+        for(cont=0; cont<5; cont++){
+            altura = parseFloat(prompt("Digite a sua altura."));
+            sexo = prompt("Digite o seu sexo.\nM para Masculino.\nF para feminino.");
+
+            if(altura == 0){
+                break;
+            }
+
+            if(maiorAltura == null){
+                maiorAltura = menorAltura = altura;
+            }else if (altura > maiorAltura) {
+                maiorAltura = altura;
+            } else if (altura < menorAltura) {
+                menorAltura = altura;
+            }
+
+            if(sexo.toUpperCase() == "M"){
+                contM++;
+            }else{
+                if(sexo.toUpperCase() == "F"){
+                    contF++;
+                }else{
+                    document.write("<br>Ainda é preciso pensar na inclusão de sexo indefinido!");
+                }
+            }
+        }
+
+        document.write("<br>A maior altura é: "+maiorAltura);
+        document.write("<br>A menor altura é:"+menorAltura);
+        document.write("<br>A quantidade de homens é: "+contM);
+        document.write("<br>A quantidade de mulheres é: "+contF);
+    </script>
+</body>
+</html>
