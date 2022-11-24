@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantidade de Idades</title>
+</head>
+<body>
+    <h1>Pessoas maiores de idade</h1>
+    <script>
+
+        var contMaior = 0;
+        var contMenor = 0;
+        var menu =-1;
+        
+        while(menu != 0){
+            var menu =  prompt("-----MENU-----"
+            +"\n0. Sair."
+            +"\n1. Continuar.");
+            var idade = prompt("Digite sua idade.");
+            if(idade >= 18){
+                contMaior++;
+                document.write("<br>Idade informada: "+idade);
+            }else{
+                if(idade < 18){
+                    contMenor++;
+                    document.write("<br>Idade informada: "+idade);
+                }else{
+                    document.write("Nâo foi possível fazer a soma!");
+                }
+            }
+            
+        }
+        document.write("<br>Quantidade de pessoas maiores de idade: "+contMaior);
+        document.write("<br>Quantidade de pessoas menores de idade: "+contMenor);
+        
+    </script>
+</body>
+</html>
