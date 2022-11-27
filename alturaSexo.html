@@ -25,10 +25,12 @@
 
             if(maiorAltura == null){
                 maiorAltura = menorAltura = altura;
-            }else if (altura > maiorAltura) {
+            }else if (altura > maiorAltura && (sexo.toUpperCase() == "M" || sexo.toUpperCase() == "F")) {
                 maiorAltura = altura;
-            } else if (altura < menorAltura) {
+                sexoMaiorAlt = sexo;
+            } else if (altura < menorAltura && (sexo.toUpperCase() == "M" || sexo.toUpperCase() == "F")) {
                 menorAltura = altura;
+                sexoMenorAlt = sexo;
             }
 
             if(sexo.toUpperCase() == "M"){
@@ -43,7 +45,9 @@
         }
 
         document.write("<br>A maior altura é: "+maiorAltura);
+        document.write("<br>A pessoa mais alta é: "+sexoMaiorAlt);
         document.write("<br>A menor altura é:"+menorAltura);
+        document.write("<br>A pessoa mais baixa é: "+sexoMenorAlt);
         document.write("<br>A quantidade de homens é: "+contM);
         document.write("<br>A quantidade de mulheres é: "+contF);
     </script>
